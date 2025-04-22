@@ -1,0 +1,121 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(#fff0f5, #ffe4e1);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Telón */
+#curtain {
+    background: linear-gradient(to right, #b71c1c, #880e4f);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#curtain h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#open-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#open-button:hover {
+    background-color: #f50057;
+}
+
+/* Poema */
+.poem {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.poem h2 {
+    font-size: 2em;
+    color: #880e4f;
+}
+
+.poem p {
+    font-size: 1.3em;
+    margin-top: 20px;
+    white-space: pre-line;
+    color: #4e342e;
+}
+
+/* Carrusel */
+.carousel {
+    margin-top: 50px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-container img {
+    width: 100%;
+    display: none;
+}
+
+.carousel-container img.active {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin: 0 10px;
+    background-color: #ff80ab;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    background-color: #ff4081;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #open-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    .poem p {
+        font-size: 1.1em;
+    }
+    .carousel-controls button {
+        padding: 8px 15px;
+        font-size: 1.2em;
+    }
+}

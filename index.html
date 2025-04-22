@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Mamita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Telón de Teatro -->
+<div id="curtain">
+    <h1>Feliz cumpleaños mamita</h1>
+    <button id="open-button">Presiona este botón y sorpréndete</button>
+</div>
+
+<!-- Música de fondo -->
+<audio id="background-music" src="audio/mimusica.mp3" loop></audio>
+
+<!-- Contenido principal (oculto al inicio) -->
+<div id="main-content" style="display: none;">
+    <section class="poem">
+        <h2>Para la mejor mamá del mundo</h2>
+        <p id="poem-text"></p>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-container" id="carousel-container">
+            <img src="images/foto1.jpg" class="active" alt="Foto 1">
+            <img src="images/foto2.jpg" alt="Foto 2">
+            <img src="images/foto3.jpg" alt="Foto 3">
+        </div>
+        <div class="carousel-controls">
+            <button onclick="prevImage()">⟨</button>
+            <button onclick="nextImage()">⟩</button>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
