@@ -92,4 +92,4 @@ setTimeout(() => {
             requestAnimationFrame(frame);
         }
     }());
-}, 18000); // 10000 milisegundos = 10 segundos
+}, 17000); // 10000 milisegundos = 10 segundos
