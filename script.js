@@ -5,15 +5,7 @@ const poemText = document.getElementById('poem-text');
 const music = document.getElementById('background-music');
 const heartsContainer = document.getElementById('hearts-container');
 
-const poem = `Madre querida, tu amor es mi guía,
-Eres mi fuerza, mi alegría.
-Tu abrazo siempre me da paz,
-Tu sonrisa ilumina mi andar.
-
-Hoy te celebro con emoción,
-Gracias, mamá, por tu bendición.
-Te amo con todo mi corazón,
-¡Feliz cumpleaños, mi inspiración!
+const poem = `¡Feliz cumpleaños, mi inspiración!
 Gracias por ser como eres y por
 nunca dejarme solo, eres simplemente 
 maravillosa, no olvides nunca que 
@@ -74,3 +66,30 @@ document.getElementById('open-button').addEventListener('click', function() {
     document.getElementById('main-content').style.display = 'block';
     document.getElementById('background-music').play();
 });
+
+// Mostrar mensaje oculto después de 10 segundos
+setTimeout(() => {
+    document.getElementById('hidden-message').style.display = 'block';
+     // Lanzar varios fuegos artificiales
+    var duration = 3 * 1000; // 3 segundos
+    var end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 7,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 }
+        });
+        confetti({
+            particleCount: 7,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+}, 18000); // 10000 milisegundos = 10 segundos

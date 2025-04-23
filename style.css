@@ -166,3 +166,30 @@ body {
         font-size: 1.2em;
     }
 }
+
+#hidden-message {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #d81b60;
+    animation: appear 2s ease-in-out;
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+/* Mensaje Final */
+.final-message {
+    margin: 50px 0;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #6a1b9a;
+    font-weight: bold;
+    background: rgba(255, 228, 225, 0.7);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
